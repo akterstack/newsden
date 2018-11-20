@@ -1,0 +1,9 @@
+.idea/
+.rocket/
+build/
+dist/
+node_modules/
+
+*.iml
+*.ipr
+*.log

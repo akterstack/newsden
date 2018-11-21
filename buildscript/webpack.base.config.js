@@ -10,8 +10,7 @@ const resolve = (file) => path.resolve(__dirname, file)
 
 module.exports = {
   devtool: isProd ?
-    false :
-    '#cheap-module-source-map',
+    false : '#cheap-module-source-map',
   output: {
     path: resolve('../public'),
     publicPath: '/public/',
@@ -67,21 +66,19 @@ module.exports = {
     maxEntrypointSize: 300000,
     hints: isProd ? 'warning' : false
   },
-  plugins: isProd ?
-    [
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false
-        }
-      }),
-      new ExtractTextPlugin({
-        filename: 'common.[chunkhash].css'
-      }),
-      new OptimizeCssAssetsPlugin({
-        assetNameRegExp: /\.css$/
-      })
-    ] :
-    [
-      new FriendlyErrorsPlugin()
-    ]
+  plugins: isProd ? [
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+    new ExtractTextPlugin({
+      filename: 'common.[chunkhash].css'
+    }),
+    new OptimizeCssAssetsPlugin({
+      assetNameRegExp: /\.css$/
+    })
+  ] : [
+    new FriendlyErrorsPlugin()
+  ]
 }

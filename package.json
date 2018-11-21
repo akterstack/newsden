@@ -4,11 +4,12 @@
   "author": "akterstack <akterstack@gmail.com>",
   "version": "0.0.1",
   "scripts": {
-    "dev": "NODE_ENV=development nodemon --watch 'src/**/*.js' --exec babel-node bin/www",
+    "dev": "node bin/www",
     "start": "cross-env NODE_ENV=production node bin/www",
     "build": "rimraf dist && npm run build:client && npm run build:server",
     "build:client": "cross-env NODE_ENV=production webpack --config buildscript/webpack.client.config.js --progress --hide-modules",
-    "build:server": "cross-env NODE_ENV=production webpack --config buildscript/webpack.server.config.js --progress --hide-modules"
+    "build:server": "cross-env NODE_ENV=production webpack --config buildscript/webpack.server.config.js --progress --hide-modules",
+    "devx": "NODE_ENV=development nodemon --watch 'src/**/*' --exec babel-node bin/www"
   },
   "engines": {
     "node": ">=7.0",

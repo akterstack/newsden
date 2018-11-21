@@ -12,7 +12,10 @@ import {
   VCard,
   transitions
 } from 'vuetify'
-import '../node_modules/vuetify/src/stylus/app.styl'
+
+import './assets/stylus/base.styl'
+
+
 import App from './App.vue'
 import Components from 'components/_index'
 
@@ -63,7 +66,11 @@ export function createApp(ssrContext) {
     router,
     store,
     ssrContext,
-    render: h => h(App)
+    render: h => {
+      let hyperscript = h(App)
+      console.log('Hi, from ' + global);
+      return hyperscript
+    }
   })
 
   // expose the app, the router and the store.

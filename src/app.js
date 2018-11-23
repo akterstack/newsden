@@ -14,10 +14,11 @@ import {
 } from 'vuetify'
 
 import './assets/stylus/base.styl'
-
-
 import App from './App.vue'
-import Components from 'components/_index'
+
+import globalComponents from "./components/globals";
+
+
 
 import {
   createStore
@@ -44,8 +45,8 @@ Vue.use(Vuetify, {
   }
 })
 
-Object.keys(Components).forEach(key => {
-  Vue.component(key, Components[key])
+Object.keys(globalComponents).forEach(key => {
+  Vue.component(key, globalComponents[key])
 })
 
 // Expose a factory function that creates a fresh set of store, router,

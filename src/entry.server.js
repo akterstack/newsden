@@ -1,6 +1,6 @@
 import {
   createApp
-} from '../app'
+} from './app'
 
 const isDev = process.env.NODE_ENV !== 'production'
 

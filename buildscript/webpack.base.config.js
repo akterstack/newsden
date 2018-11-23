@@ -21,8 +21,6 @@ module.exports = {
     alias: {
       'assets': resolve('../src/assets'),
       'components': resolve('../src/components'),
-      'examples': resolve('../src/pages/examples'),
-      'layouts': resolve('../src/layouts'),
       'mixins': resolve('../src/mixins'),
       'pages': resolve('../src/pages'),
       'public': resolve('../public'),

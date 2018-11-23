@@ -1,5 +1,8 @@
 <template>
   <v-app>
+    <n-header>
+
+    </n-header>
     <v-content>
       <v-container fluid>
         <v-slide-y-transition mode="out-in">
@@ -15,7 +18,7 @@
 
 <script>
   import Meta from 'mixins/meta'
-
+  
   export default {
     mixins: [Meta],
     data () {

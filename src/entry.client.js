@@ -2,7 +2,7 @@ import Vue from 'vue'
 import 'es6-promise/auto'
 import {
   createApp
-} from '../app'
+} from './app'
 
 const {
   app,

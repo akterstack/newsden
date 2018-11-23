@@ -2,12 +2,12 @@ const meta = require('../router/meta.json')
 
 export default {
   watch: {
-    '$route' () {
+    '$route'() {
       this.setMeta()
     }
   },
 
-  created () {
+  created() {
     if (process.env.VUE_ENV === 'client') return
 
     const metaData = meta[this.$route.path] || {}
@@ -17,12 +17,12 @@ export default {
     this.$ssrContext.keywords = metaData.keywords
   },
 
-  mounted () {
+  mounted() {
     this.setMeta()
   },
 
   methods: {
-    setMeta () {
+    setMeta() {
       if (typeof document === 'undefined') return
 
       const metaData = meta[this.$route.path] || {}

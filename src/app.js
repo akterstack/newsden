@@ -10,25 +10,23 @@ import {
   VGrid,
   VToolbar,
   VCard,
+  VMenu,
+  VSubheader,
   transitions
 } from 'vuetify'
-
-import './assets/stylus/base.styl'
-import App from './App.vue'
-
-import globalComponents from "./components/globals";
-
-
-
-import {
-  createStore
-} from 'store/index'
-import {
-  createRouter
-} from 'router/index'
 import {
   sync
 } from 'vuex-router-sync'
+
+import {
+  createStore
+} from 'store'
+import {
+  createRouter
+} from 'router'
+import 'assets/stylus/base.styl'
+import globalComponents from "components/globals";
+import App from './App.vue'
 
 Vue.use(Vuetify, {
   components: {
@@ -41,6 +39,8 @@ Vue.use(Vuetify, {
     VGrid,
     VToolbar,
     VCard,
+    VMenu,
+    VSubheader,
     transitions
   }
 })

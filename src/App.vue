@@ -1,8 +1,10 @@
 <template>
   <v-app>
-    <n-header>
-
-    </n-header>
+    <header>
+      <v-container fluid white>
+        <navbar></navbar>
+      </v-container>
+    </header>
     <v-content>
       <v-container fluid>
         <v-slide-y-transition mode="out-in">

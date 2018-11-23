@@ -1,9 +1,11 @@
 <template>
-  <navbar></navbar>
+  <top-headlines></top-headlines>
 </template>
 <script>
+import TopHeadlines from '../components/TopHeadlines';
 
 export default {
-  name: 'item-page'
+  name: 'home-page',
+  components: { TopHeadlines }
 }
 </script>

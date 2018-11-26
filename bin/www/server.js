@@ -8,7 +8,7 @@ const resolve = file => path.resolve(__dirname, file)
 const {
   createBundleRenderer
 } = require('vue-server-renderer')
-const redirects = require('../../src/router/301.json')
+const redirects = {} //require('../../src/router/301.json')
 
 const isProd = process.env.NODE_ENV === 'production'
 const useMicroCache = process.env.MICRO_CACHE !== 'false'

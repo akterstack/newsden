@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // The meta data for your routes
-const meta = require('./meta.json')
+//const meta = require('./meta.json')
 
 // Function to create routes
 // Is default lazy but can be changed
@@ -17,6 +17,9 @@ function route(path, view) {
 const routes = [{
     path: '/',
     component: resolve => import(`pages/HomePage.vue`).then(resolve)
+  }, {
+    path: '/article',
+    component: resolve => import(`pages/ArticlePage.vue`).then(resolve)
   },
   // Global redirect for 404
   {

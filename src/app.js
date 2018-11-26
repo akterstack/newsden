@@ -7,6 +7,7 @@ import {
   VList,
   VBtn,
   VIcon,
+  VImg,
   VGrid,
   VToolbar,
   VCard,
@@ -36,6 +37,7 @@ Vue.use(Vuetify, {
     VList,
     VBtn,
     VIcon,
+    VImg,
     VGrid,
     VToolbar,
     VCard,
@@ -67,11 +69,7 @@ export function createApp(ssrContext) {
     router,
     store,
     ssrContext,
-    render: h => {
-      let hyperscript = h(App)
-      console.log('Hi, from ' + global);
-      return hyperscript
-    }
+    render: h => h(App)
   })
 
   // expose the app, the router and the store.

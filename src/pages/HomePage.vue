@@ -1,11 +1,12 @@
 <template>
-  <top-headlines></top-headlines>
+  <top-news></top-news>
 </template>
 <script>
-import TopHeadlines from '../components/TopHeadlines';
-
 export default {
   name: 'home-page',
-  components: { TopHeadlines }
+  beforeCreate() {
+    console.log('Runtime->' + global);
+    
+  }
 }
 </script>

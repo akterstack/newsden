@@ -1,7 +1,11 @@
-import Navbar from './Navbar'
-import TopHeadlines from './TopHeadlines'
+import {
+  Navbar,
+  TopNews,
+  Sidebar
+} from './'
 
 export default {
   Navbar,
-  TopHeadlines
+  TopNews,
+  Sidebar
 }

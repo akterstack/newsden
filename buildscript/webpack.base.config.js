@@ -4,29 +4,37 @@ const vueConfig = require('./vue-loader.config')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const {
+  assetDir,
+  componentDir,
+  mixinDir,
+  pageDir,
+  publicDir,
+  routerDir,
+  staticDir,
+  storeDir
+} = require('../projectDirs')
 
 const isProd = process.env.NODE_ENV === 'production'
-const resolve = (file) => path.resolve(__dirname, file)
-
 module.exports = {
   devtool: isProd ?
     false : '#cheap-module-source-map',
   output: {
-    path: resolve('../public'),
+    path: publicDir,
     publicPath: '/public/',
     filename: '[name].[chunkhash].js'
   },
   resolve: {
     extensions: ['*', '.js', '.json', '.vue'],
     alias: {
-      'assets': resolve('../src/assets'),
-      'components': resolve('../src/components'),
-      'mixins': resolve('../src/mixins'),
-      'pages': resolve('../src/pages'),
-      'public': resolve('../public'),
-      'router': resolve('../src/router'),
-      'static': resolve('../src/static'),
-      'store': resolve('../src/store'),
+      'assets': assetDir,
+      'components': componentDir,
+      'mixins': mixinDir,
+      'pages': pageDir,
+      'public': publicDir,
+      'router': routerDir,
+      'static': staticDir,
+      'store': storeDir,
       'vue$': 'vue/dist/vue.common.js'
     }
   },

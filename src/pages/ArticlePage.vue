@@ -23,14 +23,8 @@ export default {
       imgUrl: 'https://images.dn.no/image/E3wG2bDIPvk5T%2Brd4uCkww%3D%3D/nhst/binary/955f2947f85debae1d7c7ed4d2ae1967'
     }
   },
-  computed: {
-    lorem() {
-      return this.$state.lorem + '000000000'
-    }
-  },
   beforeCreate() {
     console.log('Runtime ->' + global);
-    
   }
 }
 </script>
